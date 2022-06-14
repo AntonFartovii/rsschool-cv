@@ -1,4 +1,4 @@
-![img](./img/im2.jpg "Anton Shliaha")
+![img](assets/img/im2.jpg "Anton Shliaha")
 
 # Anton Shliaha
 
