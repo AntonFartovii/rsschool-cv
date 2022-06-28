@@ -1,0 +1,568 @@
+
+html {
+    scroll-behavior: smooth;
+}
+button,
+button:active,
+button:focus {
+    border-style: none;
+    border-image: none;
+    cursor: pointer;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --h-color:       #F2785C;
+    --text:          #0D606F;
+    --footer-height: 61px;
+    --header-height: 90px;
+    --popup-width:   650px;
+}
+a {
+    cursor: pointer;
+}
+
+input {
+    border-color: unset;
+    border-width: 0px;
+}
+
+/*-----------------------Start Fonts-------------------------*/
+@font-face {
+    font-family: "Red Hat Text";
+    src: url('../assets/fonts/Red_Hat_Text');
+}
+@font-face {
+    font-family: "Magra";
+    src: url("../assets/fonts/Magra");
+}
+
+@font-face {
+    font-family: "Aleo";
+    src: url("../assets/fonts/Aleo");
+}
+
+h1, h3 , label, p,
+header span, main span {
+    font-family: 'Aleo', serif;
+}
+
+h2, button, a, footer span{
+    font-family: 'Red Hat Text', serif;
+}
+/*-----------------------End Fonts-------------------------*/
+
+
+/*-----------------------------------------------------*/
+.wrapper {
+    position: relative;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.wrapper.active {
+    opacity: 0.7;
+}
+header, footer {
+    color: #ffffff;
+    width: 100%;
+}
+header {
+    position: relative;
+    z-index: 5;
+}
+
+a, h1, h2, h3, span, button, label {
+    font-style: normal;
+}
+
+
+h1 {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 96px;
+    color: #FFFFFF;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    color: #0D606F;
+}
+
+.container {
+    position: relative;
+    height:  100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.inner-wrapper {
+    position: relative;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.container-header {
+
+    background: rgba(242, 120, 92, 0.7);
+    box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+
+}
+
+.header-wrapper {
+
+    height: var(--header-height);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav {
+    font-family: 'Red Hat Text';
+}
+
+.header-menu {
+    display: flex;
+    flex-direction: row;
+}
+.header-menu li {
+    margin-right: 42px;
+}
+.header-menu li:last-child {
+    margin-right: 0px;
+}
+.header-menu li a {
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.logo {
+    font-family: 'Magra';
+    font-weight: 600;
+    font-size: 32px;
+    color: #FFFFFF;
+}
+
+.destinations {
+    height: 100%;
+    margin-bottom: 20px;
+}
+.destination-body {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+.destination-body img {
+    margin: 0 60px;
+    max-width: 800px;
+    max-height: 800px;
+    border-radius: 16px;
+}
+.pagination {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    padding: 24px 0 40px;
+    width: max-content;
+}
+.pagination div{
+    background: #F2785C;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+.pagination div:last-child {
+    margin-right: 0px;
+}
+.pagination div.active {
+    opacity: 1;
+}
+
+
+
+
+
+/*---------------start section-------------*/
+.section {
+    position: relative;
+    width: 100%;
+    font-family: 'Aleo';
+}
+.section-title {
+
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.stories-section-title {
+    margin-bottom: 80px;
+}
+/*---------------end section-------------*/
+
+.preview {
+    top: calc(var(--header-height) * -1);
+    height: 765px;
+    margin-bottom: calc(80px - var(--header-height));
+    background: url("../assets/img/garrett-parker-DlkF4-dbCOU-unsplash.jpg") no-repeat;
+    background-size: cover;
+    padding-top: 122px;
+}
+.preview-info {
+    font-family: 'Aleo';
+    font-style: italic;
+    max-width: 892px;
+    height: 422px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+.preview-info span {
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+}
+/*--------------start button------------------------*/
+.btn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+
+    flex-shrink: 0;
+    text-align: center;
+    padding: 10px 30px;
+    background: #0D606F;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 500;
+    color: #FFFFFF;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+}
+
+.btn-login {
+    font-size: 16px;
+    width: 103px;
+}
+
+/*body:active .popup {*/
+/*    display: block;*/
+/*}*/
+
+.btn-preview {
+    font-size: 24px;
+    width: 228px;
+}
+
+.btn-section {
+    font-size: 24px;
+    width: 228px;
+    margin: 0 auto;
+}
+.btn-popup {
+
+    width: 100%;
+    margin: 25px 0 10px 0;
+    padding: 14px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+}
+/*--------------end button------------------------*/
+
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-family: 'Aleo';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #F2785C;
+
+    position: relative;
+    padding: 18px;
+    width: 100%;
+    height: 95px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+
+}
+
+/*--------------------------Start section steps----------------*/
+
+.steps {
+    margin-bottom: 97px;
+}
+.steps-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.steps .step {
+    text-align: center;
+}
+.steps .icon {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+}
+.steps span {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
+}
+
+
+/*--------------------------Start section stories----------------*/
+.stories {
+    padding-bottom: var(--footer-height);
+    bottom: -61px;
+    background-image: url("../assets/img/Rectangle_27.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 61px;
+}
+
+
+.stories .story {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    color: #0D606F;
+}
+.stories .story:last-child {
+    margin-bottom: 40px;
+}
+
+.story .story-img {
+    max-width: 400px;
+    max-height: 250px;
+}
+.story .story-img img {
+    border-radius: 16px;
+}
+.story .story-body {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+.story span {
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.story .story-title {
+    margin-bottom: 24px;
+}
+.story p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.bg {
+    position: relative;
+    background: rgba(255, 255, 255, 0.7);
+    padding-bottom: 41px;
+}
+/*--------------------------end section stories----------------*/
+
+/*---------------Start Footer--------------------*/
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: var(--footer-height);
+    line-height: var(--footer-height);
+}
+
+.container-footer {
+    position: relative;
+    height: 100%;
+    text-align: center;
+}
+
+.social-list {
+    width: 141px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    right: 0;
+    bottom: 0;
+}
+.social * {
+    vertical-align: middle;
+}
+
+
+/*--------------------------popup-----------------------*/
+
+.popup {
+    display: none;
+    position: absolute;
+    opacity: 1;
+    z-index: 101;
+    top: var(--header-height);
+    left: calc(50% - (var(--popup-width) / 2));
+    max-width: var(--popup-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px 45px 23px 45px;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+.popup-title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Aleo';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #0D606F;
+}
+
+.popup-inner {
+    margin: 0 auto;
+    max-width: 560px;
+}
+.auth-fb, .auth-google  {
+
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    height: 56px;
+    border-radius: 10px;
+}
+
+.auth-fb a, .auth-google a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.auth-fb a {
+    color: #FFFFFF;
+}
+
+.auth-google a {
+    color: #0D606F;
+}
+
+.auth-fb img, .auth-google img {
+    margin-right: 15px;
+}
+
+.auth-fb {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    background: #1877F2;
+}
+
+.auth-google {
+    color: #0D606F;
+    margin-bottom: 30px;
+    background: #FFFFFF;
+}
+
+.popup .input {
+    width: 100%;
+    height: 54px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.popup label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0D606F;
+}
+hr.main:after {
+    content: 'or';
+    position: relative;
+    left: 50%;
+    top: 0;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
+
+
+    color: rgba(13, 96, 111, 0.5);
+}
+hr.main, hr.auth {
+    margin: 26px 0 20px 0;
+    border: 1px solid rgba(13, 96, 111, 0.5);
+    transform: rotate(0.1deg);
+}
+
+.popup .link-auth {
+    text-align: center;
+}
+
+.popup .link-auth a,
+.popup .link-auth span {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    font-family: 'Aleo';
+
+}
+
+.popup .link-auth a {
+    text-decoration-line: underline;
+    color: #0D606F;
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+}
+.popup .link-auth span {
+    color: rgba(13, 96, 111, 0.5);
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+}
+
