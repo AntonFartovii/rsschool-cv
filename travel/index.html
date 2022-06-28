@@ -12,6 +12,7 @@
     <link rel="icon" href="./assets/favicon.ico">
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/style.css">
+
     <title>Document</title>
 </head>
 <body>
@@ -28,10 +29,10 @@
                 </div>
                 <nav class="header-nav">
                     <ul class="header-menu">
-                        <li><a>How It Works</a></li>
-                        <li><a>Plan Your Trip</a></li>
-                        <li><a>Destinations</a></li>
-                        <li><a>Travel Stories</a></li>
+                        <li><a href="#preview">How It Works</a></li>
+                        <li><a href="#steps">Plan Your Trip</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#stories">Travel Stories</a></li>
                     </ul>
                 </nav>
                 <button class="btn btn-login">
@@ -46,7 +47,7 @@
     <main>
         <div class="container container-main">
 
-            <section class="section preview">
+            <section class="section preview" id="preview">
                 <div class="inner-wrapper">
                     <div class="preview-info">
                         <h1>Explore the beauty of the World</h1>
@@ -63,7 +64,7 @@
                 </div>
             </section>
 
-            <section class="section steps">
+            <section class="section steps" id="steps">
                 <div class="inner-wrapper">
                     <div class="section-title">
                         <h2>3 STEPS TO THE PERFECT TRIP</h2>
@@ -91,16 +92,16 @@
                 </div>
             </section>
 
-            <section class="section destinations">
+            <section class="section destinations" id="destinations">
 
                 <div class="section-title">
                     <h2>POPULAR DESTINATIONS</h2>
                 </div>
 
                 <div class="destination-body">
-                    <img src="./assets/img/Rectangle_23.png" alt="photo ocean" title="ocean">
-                    <img src="./assets/img/Rectangle_24.png" alt="photo Japan" title="Japan">
-                    <img src="./assets/img/Rectangle_25.png" alt="photo USA" title="USA">
+                    <img src="./assets/img/Rectangle_23.jpg" alt="photo ocean" title="ocean">
+                    <img src="./assets/img/Rectangle_24.jpg" alt="photo Japan" title="Japan">
+                    <img src="./assets/img/Rectangle_25.jpg" alt="photo USA" title="USA">
                 </div>
                 <div class="pagination">
                     <div></div>
@@ -112,7 +113,7 @@
                 </button>
             </section>
 
-            <section class="section stories">
+            <section class="section stories" id="stories">
                 <div class="bg">
                     <div class="inner-wrapper">
                     <div class="section-title stories-section-title">
@@ -120,7 +121,7 @@
                     </div>
                     <div class="story">
                         <div class="story-img">
-                            <img src="./assets/img/Rectangle_29.png"
+                            <img src="./assets/img/Rectangle_29.jpg"
                                  alt="10 Photos of Attractive Thailand"
                                     title="10 Photos of Attractive Thailand">
                         </div>
@@ -140,7 +141,7 @@
                     </div>
                     <div class="story">
                         <div class="story-img">
-                            <img src="./assets/img/Rectangle_30.png"
+                            <img src="./assets/img/Rectangle_30.jpg"
                                  alt="Canyonlands National Park, Utah"
                                     title="Canyonlands National Park, Utah">
                         </div>
@@ -160,7 +161,7 @@
                     </div>
                     <div class="story">
                         <div class="story-img">
-                            <img src="./assets/img/Rectangle_29.png"
+                            <img src="./assets/img/Rectangle_29.jpg"
                                  alt="I left my heart in the Mountains!"
                                     title="I left my heart in the Mountains!">
                         </div>
@@ -180,7 +181,7 @@
                     </div>
                     <div class="story">
                         <div class="story-img">
-                            <img src="./assets/img/Rectangle_30.png"
+                            <img src="./assets/img/Rectangle_30.jpg"
                                  alt="The Longest journey in my life!"
                                     title="The Longest journey in my life!">
                         </div>
@@ -227,7 +228,7 @@
                         </li>
 
                         <li class="social-item">
-                            <a href="https://rs.school/js-stage0/">
+                            <a href="https://github.com/AntonFartovii/">
                                 <img src="./assets/svg/akar-icons_twitter-fill.svg" alt="logo twitter">
                             </a>
                         </li>
@@ -243,6 +244,56 @@
             </div>
         </div>
     </footer>
+
+
+
 </div>
+<div class="popup popup-auth">
+    <div class="popup-title">
+        Log in to your account
+    </div>
+    <div class="auth-fb">
+        <a>
+            <img src="assets/svg/fb.svg" alt="fb logo"/>
+            Sign In with Facebook
+        </a>
+    </div>
+    <div class="auth-google">
+        <a>
+            <img src="assets/svg/google.svg" alt="google logo"/>
+            Sign In with Google
+        </a>
+    </div>
+    <hr class="main"/>
+    <label for="email">E-mail</label>
+    <input id="email" class="input">
+    <label for="pass">Password</label>
+    <input id="pass" class="input">
+    <button class="btn btn-popup">Sign In</button>
+    <div class="link-auth">
+        <a>Forgot Your Password?</a>
+        <hr class="auth"/>
+        <span>Don’t have an account?</span>&nbsp;<a class="link-reg">Register</a>
+    </div>
+
+</div>
+    <div class="popup popup-reg">
+        <div class="popup-title">
+            Create account
+        </div>
+
+        <label for="email">E-mail</label>
+        <input id="email" class="input">
+        <label for="pass">Password</label>
+        <input id="pass" class="input">
+        <button class="btn btn-popup">Sign In</button>
+        <div class="link-auth">
+            <a>Forgot Your Password?</a>
+            <hr class="auth"/>
+            <span>Don’t have an account?</span>&nbsp;<a class="link-auth">Register</a>
+        </div>
+
+    </div>
+<script src="index.js"></script>
 </body>
 </html>

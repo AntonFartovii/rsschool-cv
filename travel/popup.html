@@ -11,7 +11,7 @@
     <title>Popup</title>
 </head>
 <body>
-    <div class="popup">
+    <div class="popup ">
             <div class="popup-title">
                 Log in to your account
             </div>
@@ -27,12 +27,34 @@
                     Sign In with Google
                 </a>
             </div>
-            <hr/>
+            <hr class="main"/>
             <label for="email">E-mail</label>
             <input id="email" class="input">
             <label for="pass">Password</label>
             <input id="pass" class="input">
-            <button class="btn">Sign In</button>
+            <button class="btn btn-popup">Sign In</button>
+            <div class="link-auth">
+                <a>Forgot Your Password?</a>
+                <hr class="auth"/>
+                <span>Don’t have an account?</span>&nbsp;<a class="link-auth">Register</a>
+            </div>
+
+    </div>
+    <div class="popup popup-reg">
+        <div class="popup-title">
+            Create account
+        </div>
+
+        <label for="email">E-mail</label>
+        <input id="email" class="input">
+        <label for="pass">Password</label>
+        <input id="pass" class="input">
+        <button class="btn btn-popup">Sign In</button>
+        <div class="link-auth">
+            <a>Forgot Your Password?</a>
+            <hr class="auth"/>
+            <span>Don’t have an account?</span>&nbsp;<a class="link-auth">Register</a>
+        </div>
 
     </div>
 </body>

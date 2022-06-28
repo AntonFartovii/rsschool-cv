@@ -1,3 +1,7 @@
+
+html {
+    scroll-behavior: smooth;
+}
 button,
 button:active,
 button:focus {
@@ -17,6 +21,7 @@ button:focus {
     --text:          #0D606F;
     --footer-height: 61px;
     --header-height: 90px;
+    --popup-width:   650px;
 }
 
 input {
@@ -27,25 +32,25 @@ input {
 /*-----------------------Start Fonts-------------------------*/
 @font-face {
     font-family: "Red Hat Text";
-    src: url("../assets/fonts/Red_Hat_Text");
+    src: url("../assets/fonts/Red_Hat_Text/");
 }
 @font-face {
     font-family: "Magra";
-    src: url("../assets/fonts/Magra");
+    src: url("../assets/fonts/Magra/");
 }
 
 @font-face {
     font-family: "Aleo";
-    src: url("../assets/fonts/Aleo");
+    src: url("../assets/fonts/Aleo/");
 }
 
 h1, h3 , label, p,
 header span, main span {
-    font-family: 'Aleo';
+    font-family: 'Aleo', serif;
 }
 
 h2, button, a, footer span{
-    font-family: 'Red Hat Text';
+    font-family: 'Red Hat Text', serif;
 }
 /*-----------------------End Fonts-------------------------*/
 
@@ -141,6 +146,7 @@ nav {
     font-weight: 500;
     font-size: 16px;
     color: #FFFFFF;
+    text-decoration: none;
 }
 
 .logo {
@@ -216,7 +222,7 @@ nav {
     top: calc(var(--header-height) * -1);
     height: 765px;
     margin-bottom: calc(80px - var(--header-height));
-    background: url("../assets/img/garrett-parker-DlkF4-dbCOU-unsplash 1.png") no-repeat;
+    background: url("../assets/img/garrett-parker-DlkF4-dbCOU-unsplash.jpg") no-repeat;
     background-size: cover;
     padding-top: 122px;
 }
@@ -248,7 +254,7 @@ nav {
     justify-content: space-around;
 
     flex-shrink: 0;
-
+    text-align: center;
     padding: 10px 30px;
     background: #0D606F;
     text-align: center;
@@ -263,6 +269,10 @@ nav {
     width: 103px;
 }
 
+/*body:active .popup {*/
+/*    display: block;*/
+/*}*/
+
 .btn-preview {
     font-size: 24px;
     width: 228px;
@@ -272,6 +282,15 @@ nav {
     font-size: 24px;
     width: 228px;
     margin: 0 auto;
+}
+.btn-popup {
+
+    width: 100%;
+    margin: 25px 0 10px 0;
+    padding: 14px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
 }
 /*--------------end button------------------------*/
 
@@ -330,7 +349,7 @@ nav {
 .stories {
     padding-bottom: var(--footer-height);
     bottom: -61px;
-    background-image: url("../assets/img/Rectangle 27.png");
+    background-image: url("../assets/img/Rectangle_27.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 61px;
@@ -413,7 +432,13 @@ footer {
 /*--------------------------popup-----------------------*/
 
 .popup {
-    max-width: 650px;
+    display: none;
+    position: absolute;
+    opacity: 1;
+    z-index: 101;
+    top: var(--header-height);
+    left: calc(50% - (var(--popup-width) / 2));
+    max-width: var(--popup-width);
     margin-left: auto;
     margin-right: auto;
     padding: 25px 45px 23px 45px;
@@ -491,17 +516,47 @@ footer {
     line-height: 19px;
     color: #0D606F;
 }
+hr.main:after {
+    content: 'or';
+    position: relative;
+    left: 50%;
+    top: 0;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
 
-hr {
-    color: #0D606F;
-    height: 1px;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-    overflow: visible;
+
+    color: rgba(13, 96, 111, 0.5);
+}
+hr.main, hr.auth {
+    margin: 26px 0 20px 0;
     border: 1px solid rgba(13, 96, 111, 0.5);
+    transform: rotate(0.1deg);
 }
-hr:before {
+
+.popup .link-auth {
+    text-align: center;
+}
+
+.popup .link-auth a,
+.popup .link-auth span {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    font-family: 'Aleo';
+
+}
+
+.popup .link-auth a {
+    text-decoration-line: underline;
     color: #0D606F;
-    content: "or";
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
 }
+.popup .link-auth span {
+    color: rgba(13, 96, 111, 0.5);
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+}
+
