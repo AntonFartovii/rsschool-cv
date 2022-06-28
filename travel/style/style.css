@@ -23,6 +23,9 @@ button:focus {
     --header-height: 90px;
     --popup-width:   650px;
 }
+a {
+    cursor: pointer;
+}
 
 input {
     border-color: unset;
@@ -32,16 +35,16 @@ input {
 /*-----------------------Start Fonts-------------------------*/
 @font-face {
     font-family: "Red Hat Text";
-    src: url("../assets/fonts/Red_Hat_Text/");
+    src: url('../assets/fonts/Red_Hat_Text');
 }
 @font-face {
     font-family: "Magra";
-    src: url("../assets/fonts/Magra/");
+    src: url("../assets/fonts/Magra");
 }
 
 @font-face {
     font-family: "Aleo";
-    src: url("../assets/fonts/Aleo/");
+    src: url("../assets/fonts/Aleo");
 }
 
 h1, h3 , label, p,
@@ -62,6 +65,9 @@ h2, button, a, footer span{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.wrapper.active {
+    opacity: 0.7;
 }
 header, footer {
     color: #ffffff;
