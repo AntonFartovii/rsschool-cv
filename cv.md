@@ -50,8 +50,7 @@ Energy business CEO:
 
 •	Head of sales and engineering department partner organization Schneider Electric in Belarus, 5+ years
 
-
-2007 -2008 
+2007 - 2008
 
 Assembler developer 1 year at Integral GmbH
 
