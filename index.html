@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>cv</title>
+</head>
+<body>
+<header>
+    <div class="container">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#contacts" class="nav-link" title="My contacts" alt="My contacts">My contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" title="About me" alt="About me">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link" title="Skills" alt="Skills">Skills</a></li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link" title="Experience" alt="Experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education" class="nav-link" title="Education" alt="Education">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#languages" class="nav-link" title="Languages" alt="Languages">Languages</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <section class="section section-profile" id="profile">
+            <div>
+                <img src="./assets/img/im2.jpg" alt="Anton photo">
+            </div>
+            <div>
+                <h1 class="section-title">Anton Fartovii</h1>
+            </div>
+        </section>
+        <section class="section" id="contacts">
+            <h2 class="section-title">My contacts</h2>
+            <ul>
+                <li><b>GSM:</b> +312 234 23-23-21</li>
+                <li><b>E-mail:</b> anton@github.by</li>
+                <li><b>Telegram:</b> Anton_fartovii</li>
+                <li><b>GitHub:</b> AntonFartovii</li>
+                <li><b>Discord:</b> AntonFartovii#4574</li>
+            </ul>
+        </section>
+        <section class="section" id="about">
+            <h2 class="section-title">About me</h2>
+            <p>
+                Hello! I am JS developer. I am confident, I am ambitious, I am creative,
+                I like the new phase of my developer career!
+            </p>
+        </section>
+        <section class="section" id="skills">
+            <h2 class="section-title">Skills</h2>
+            <ul>
+                <li>HTML 5.0, CSS3</li>
+                <li>JS, ES6, TS, NodeJS, Nest</li>
+                <li>PHP</li>
+                <li>VCS Git, Docker</li>
+                <li>IDE: WebStorm, PhpStorm, VSCode, Figma</li>
+                <li>Finding solutions with limited budgets</li>
+                <li>Teamwork</li>
+                <li>Open-minded</li>
+            </ul>
+        </section>
+        <section class="section" id="code">
+            <h2 class="section-title">Code examples</h2>
+            <pre class="pre">
+<code>
+function max(array) {
+    const l = array.length;
+    if (l == 0) return -Infinity;
+
+    const num = array[0];
+    if (l == 1) return num;
+
+    else if (l > 2)   {
+        const newArr = array[0] >= array[l-1]
+            ? array.slice(0,-1)
+            : array.slice(1,0)
+        max(newArr)
+    }
+    return num
+}
+</code>
+</pre>
+
+        </section>
+        <section class="section" id="experience">
+            <h2 class="section-title">Experience</h2>
+
+            <h5>2008 – 2022</h5>
+            Energy business CEO:
+                <ul>
+                    <li>Head of service department partner organization Schneider Electric in Belarus, 5+ years</li>
+                    <li>Head of sales and engineering department partner organization Schneider Electric in Belarus, 5+ years</li>
+                </ul>
+            <h5>2007 - 2008</h5>
+            <p>Assembler developer 1 year at Integral GmbH</p>
+        </section>
+        <section class="section" id="education">
+            <h2 class="section-title">Education</h2>
+            <h5>RS School</h5>
+            <p>
+                Now, I have been learning courses JS Stage Frontend and NodeJS 2022 Q2
+            </p>
+            <h5>2002 - 2007</h5>
+            <p>
+
+                Belarusian university of informatics and radio electronics<br>
+                Faculty of radio technical and electronic
+            </p>
+        </section>
+        <section class="section" id="languages">
+            <h2 class="section-title">Languages</h2>
+            <ul>
+                <li>English Pre-Intermediate A2</li>
+                <li>French Pre-Intermediate A2</li>
+                <li>Russian</li>
+                <li>Polish</li>
+            </ul>
+        </section>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container container-footer">
+        <div class="rss-logo">
+            <a href="https://rs.school/js/">
+            </a>
+        </div>
+        <div class="git-logo">
+            <a href="https://github.com/AntonFartovii">
+                <img src="./assets/svg/github-logo.svg" alt="GitHub Logo">
+                My GitHub
+            </a>
+        </div>
+        <div>
+            © 2022
+        </div>
+    </div>
+</footer>
+</body>
+</html>
