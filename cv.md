@@ -57,7 +57,7 @@ Assembler developer 1 year at Integral GmbH
 # Education
 RS School
 
-Now, I have been learning courses JS Stage Frontend and NodeJS 2022 Q2
+Now, I have been learning courses JS Stage Frontend, React and NodeJS 2022 Q2
 
 2002 – 2007
 
