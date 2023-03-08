@@ -1,0 +1,159 @@
+@font-face {
+    font-family: Lato;
+    src: url("../assets/fonts/Lato");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    margin: 10px 0 15px 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fafafa ;
+}
+/**************** for all ******************/
+.nav-link, h2 {
+    color: #009688;
+}
+
+.container {
+    height:  100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/**************** header ******************/
+.nav {
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0 20px;
+    line-height: 50px;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    align-items: flex-start;
+}
+.nav-link {
+    font-size: 20px;
+    padding: 0 20px;
+    line-height: 50px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/**************** main ******************/
+.container .section {
+    font-size: 16px;
+    position: relative;
+    /*max-width: 900px;*/
+    min-height: 100px;
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background: #0096882e;
+    color: #4d4d4d;
+    /*border: 1px solid #0096882e;*/
+}
+.section li {
+    padding: 5px 0;
+}
+.section li b {
+    display: inline-block;
+    width: 100px;
+}
+
+.section-title {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-break: break-word
+}
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 20px;
+    position: absolute;
+    left: 0px;
+    top: -35px;
+    padding: 5px 10px;
+    border-radius: 7px;
+}
+.section-profile {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.section-profile img {
+    position: relative;
+    border-radius: 5%;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.pre {
+    white-space: pre;
+    word-break: break-word;
+    word-wrap: break-word;
+    display: block;
+    overflow-x: auto;
+}
+
+/**************** footer ******************/
+.container-footer {
+    min-height: 200px;
+}
+
+.container-footer, .git-logo a, .rss-logo a {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.git-logo img {
+    border-radius: 50%;
+    background: #000;
+    margin: 0 5px;
+
+}
+.rss-logo a {
+    display: block;
+    width: 120px;
+    height: 45px;
+    background-image: url(../assets/svg/rs_school_js.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/**************** media ******************/
+@media (max-width: 768px) {
+    .container-footer > div {
+        margin: 10px 0;
+    }
+    .section-profile, .container-footer {
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        align-content: center;
+    }
+}
